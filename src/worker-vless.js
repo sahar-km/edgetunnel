@@ -1,4 +1,4 @@
-// <!--GAMFC-->version base on commit 4221293b0abd63cc139adb24f0e707548e488dfb, time is 2024-04-17 00:49:20 UTC<!--GAMFC-END-->.
+// <!--GAMFC-->version base on commit ac70d298ab874df4b0cf21116927547b48926361, time is 2024-04-17 00:49:38 UTC<!--GAMFC-END-->.
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
