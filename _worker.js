@@ -554,7 +554,7 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
 	// only handle dns udp for now
 	transformStream.readable.pipeTo(new WritableStream({
 		async write(chunk) {
-			const resp = await fetch('https://94.140.14.14/dns-query',
+			const resp = await fetch('https://1.1.1.1/dns-query',
 				{
 					method: 'POST',
 					headers: {
