@@ -1,12 +1,12 @@
-// <!-- time is 2024-04-16 18:02:37 UTC --!>
+// <!-- time is 2024-04-33 21:12:37 UTC --!>
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
-let userID = '737477b6-7c1a-48b5-8dff-a01d5966e1d2';
+let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 
-let proxyIP = 'proxyip.vultr.fxxk.dedyn.io';
+let proxyIP = '';
 
 
 if (!isValidUUID(userID)) {
@@ -600,7 +600,7 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
  * @returns {string}
  */
 function getVLESSConfig(userID, hostName) {
-	const vlessMain = `vless://${userID}\u0040${hostName}:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#${hostName}`
+	const vlessMain = `vless://${userID}\u0040${hostName}:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`
 	return `
 ################################################################
 v2ray
@@ -628,4 +628,3 @@ clash-meta
 ################################################################
 `;
 }
-
