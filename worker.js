@@ -1,4 +1,4 @@
-// <!-- time is 2024-04-33 21:12:37 UTC --!>
+// <!--GAMFC-->version base on commit d2f4b8d347221463def0a4de85d649e511c69b77, time is 2024-04-17 00:52:59 UTC<!--GAMFC-END-->.
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
@@ -6,7 +6,7 @@ import { connect } from 'cloudflare:sockets';
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 
-let proxyIP = '';
+let proxyIP = '5.29.194.1';
 
 
 if (!isValidUUID(userID)) {
