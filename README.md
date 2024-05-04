@@ -1,4 +1,18 @@
-# Cloudflare Worker 2 Vless & Sub
+# Cloudflare Worker 2 Vless & Sub  
+
+
+
+🇮🇷 [Persian](README-fa.md)  
+
+
+🇹🇷 [Turkish](README.tr.md)  
+
+
+🇬🇧 [English](README.MD)  
+
+
+🇨🇳[ Chinese](README.zh-CN.md)  
+
 
 This is a script based on the Cloudflare Worker platform. Based on the original version, it is modified to display VLESS configuration information and convert it into subscription content. Using this script, you can easily convert VLESS configuration information into tools such as Clash or Singbox using online configuration.
 
@@ -7,28 +21,6 @@ This is a script based on the Cloudflare Worker platform. Based on the original 
 -   Advanced tutorial on using perspective:<https://www.youtube.com/watch?v=s91zjpw3-P8>
 
 Telegram communication group:[@CMLiussss](https://t.me/CMLiussss)
-
-# Disclaimer
-
-This disclaimer applies to the “edgetunnel” project on GitHub (hereinafter referred to as the “project”), the project link is:<https://github.com/cmliu/edgetunnel>
-
-### use
-
-This project is designed and developed for learning, research and safety testing purposes only. It aims to provide security researchers, academics, and technology enthusiasts with a tool to understand and practice network communication technologies.
-
-### legality
-
-Users must comply with local laws and regulations when downloading and using this project. Users are responsible for ensuring that their actions comply with the laws, regulations and other applicable requirements of their region.
-
-### Disclaimer
-
-1.  As the author of this project, I (hereinafter referred to as the "Author") emphasize that this project should be used only for legal, ethical and educational purposes.
-2.  The author does not encourage, support or promote any form of illegal use of this project. If this project is found to be used for illegal or unethical activities, the author will strongly condemn such behavior.
-3.  The author is not responsible for any illegal activities carried out by any person or group using this project. Any consequences arising from the use of this project shall be borne by the user himself.
-4.  The author is not responsible for any direct or indirect damages that may arise from the use of this project.
-5.  By using this project, users indicate that they understand and agree to all the terms of this disclaimer. If the user does not agree to these terms, he should immediately stop using the project.
-
-The author reserves the right to update this disclaimer at any time without prior notice. The latest version of the disclaimer will be published on the project's GitHub page.
 
 ## risk warning
 
@@ -39,66 +31,66 @@ The author reserves the right to update this disclaimer at any time without prio
 
 1.  Deploy Cloudflare Worker:
     -   Create a new Worker in the Cloudflare Worker console.
-    -   Will[worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)Paste the contents into the Worker editor.
-    -   Change line 7`userID`Modify it to your own**UUID**。
+    -   Will [worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js) Paste the contents into the Worker editor.
+    -   Change line 7 `userID` Modify it to your own **UUID** 。
 
 2.  Access subscription content:
-    -   access`https://[YOUR-WORKERS-URL]/[UUID]`Subscription content is available.
-    -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`This is your universal adaptive subscription address.
-    -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64 subscription format, suitable for PassWall, SSR+, etc.
-    -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`Clash subscription format, suitable for OpenClash, etc.
-    -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox subscription format, suitable for singbox, etc.
+    -   access `https://[YOUR-WORKERS-URL]/[UUID]` Subscription content is available.
+    -   For example your subscription link will be: `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` This is your universal adaptive subscription address.
+    - Base64 subscription format: `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub` suitable for PassWall, SSR+, etc.
+    -   Clash subscription format `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash` suitable for OpenClash, etc.
+    -   singbox subscription format `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb` suitable for singbox, etc.
 
 3.  Bind a custom domain to workers:
-    -   In the workers console`触发器`tab, click below`添加自定义域`。
-    -   Fill in the secondary domain name that you have transferred to the CloudFlare domain name resolution service, for example:`vless.google.com`After click`添加自定义域`, just wait for the certificate to take effect.
+    -   In the workers console `trigger` tab, click below `Add a custom domain` 。
+    -   Fill in the secondary domain name that you have transferred to the CloudFlare domain name resolution service, for example:`vless.google.com`After click `Add a custom domain` , just wait for the certificate to take effect.
     -   **If you are a novice, you can take off directly now without looking further! ! !**
 
 <details>
-<summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
+<summary><code><strong>「 I'm not a newbie! I'm really, really not a newbie! I want to try some tricks! I want to start playing with advanced techniques! 」</strong></code></summary>
 
-4.  use your own`优选域名`/`优选IP`Subscriptions for:
+4.  use your own `Preferred domain name`/`BestIP`Subscriptions for:
     -   If you want to use your own preferred domain name or your own preferred IP, you can refer to[WorkerVless2sub GitHub repository](https://github.com/cmliu/WorkerVless2sub)Build it yourself according to the deployment instructions in .
-    -   Open[worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)file, found on line 12`sub`variable and modify it to the address of your deployed subscription generator. For example`let sub = 'sub.cmliussss.workers.dev';`, be careful not to include protocol information and symbols such as https.
-    -   Note that if you use your own subscription address, the subscription generator's`sub`domain name and`[YOUR-WORKER-URL]`The domain name does not belong to the same top-level domain name, otherwise an exception will occur. You can`sub`The variable is assigned the domain name assigned to workers.dev.
+    -   Open [worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js) file, found on line 12 `sub` variable and modify it to the address of your deployed subscription generator. For example `let sub = 'sub.cmliussss.workers.dev';` , be careful not to include protocol information and symbols such as https.
+    -   Note that if you use your own subscription address, the subscription generator's `sub` domain name and `[YOUR-WORKER-URL]` The domain name does not belong to the same top-level domain name, otherwise an exception will occur. You can `sub` The variable is assigned the domain name assigned to workers.dev.
 
 </details>
 
 ## Pages upload deployment method**Best recommendation!!!**[Video tutorial](https://www.youtube.com/watch?v=59THrmJhmAw)
 
 1.  Deploy Cloudflare Pages:
-    -   download[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)file and click Star!!!
-    -   Select in the Cloudflare Pages console`上传资产`Finally, give your project a name and click`创建项目`, and then upload the downloaded[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Click after the file`部署站点`。
-    -   After deployment is complete, click`继续处理站点`After that, select`设置`>`环境变量`>**make**Define variables for production >`添加变量`.
-        Fill in the variable name**UUID**, the value is your UUID, then click`保存`That’s it.
-    -   return`部署`tab, click in the lower right corner`创建新部署`Then re-upload[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Click after the file`保存并部署`That’s it.
+    -   download [worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip) file and click Star!!!
+    -   Select in the Cloudflare Pages console `Upload assets` Finally, give your project a name and click `Create a project` , and then upload the downloaded [worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip) Click after the file `Deployment Site` 。
+    -   After deployment is complete, click `Continue processing site` After that, select `set up` > `Environment variables` > **make** Define variables for production > `Add variables` .
+        Fill in the variable name **UUID**, the value is your UUID, then click `keep` That’s it.
+    -   return `Deploy` tab, click in the lower right corner `Create a New Deployment` Then re-upload [worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip) Click after the file `Save and deploy` That’s it.
 
 2.  Access subscription content:
-    -   access`https://[YOUR-PAGES-URL]/[YOUR-UUID]`Subscription content is available.
-    -   For example`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`This is your universal adaptive subscription address.
-    -   For example`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64 subscription format, suitable for PassWall, SSR+, etc.
-    -   For example`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`Clash subscription format, suitable for OpenClash, etc.
-    -   For example`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox subscription format, suitable for singbox, etc.
+    -   access `https://[YOUR-PAGES-URL]/[YOUR-UUID]` Subscription content is available.
+    -   For example your subscription link will be:  `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`This is your universal adaptive subscription address.
+    -   Base64 subscription format: `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub` suitable for PassWall, SSR+, etc.
+    -   Clash subscription format: `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash` suitable for OpenClash, etc.
+    -   singbox subscription format `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb` suitable for singbox, etc.
 
 <details>
-<summary><code><strong>「 我自己有域名！我要绑定自己的域名！我已经熟练的掌握域名解析！ 」</strong></code></summary>
+<summary><code><strong>「 I have my own domain name! I want to bind my own domain name! I have mastered domain name resolution! 」</strong></code></summary>
    
-3. 给 Pages绑定 CNAME自定义域：[视频教程](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
-   - 在 Pages控制台的 `自定义域`选项卡，下方点击 `设置自定义域`。
-   - 填入你的自定义次级域名，注意不要使用你的根域名，例如：
-     您分配到的域名是 `fuck.cloudns.biz`，则添加自定义域填入 `lizi.fuck.cloudns.biz`即可；
-   - 按照 Cloudflare 的要求将返回你的域名DNS服务商，添加 该自定义域 `lizi`的 CNAME记录 `edgetunnel.pages.dev` 后，点击 `激活域`即可。
-   - **如果你是小白，那么你的 pages 绑定`自定义域`之后即可直接起飞，不用再往下看了！！！**
+3. Bind a CNAME custom domain to Pages: [Video Tutorial](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
+   - In the Pages console `Custom domains` tab, click below `Set up a custom domain` 。
+   - Fill in your custom subdomain name, be careful not to use your root domain name, for example：
+     The domain name you are assigned is `fuck.cloudns.biz` ，Add a custom field to fill in `lizi.fuck.cloudns.biz` You can；
+   - According to Cloudflare's requirements, your domain name DNS service provider will be returned, and the custom domain will be added `lizi` CNAME record for `edgetunnel.pages.dev` Then click on `Activate Domain` You can。
+   - **If you are new, then your pages binding `Custom domains` After that, you can take off directly without looking down.！！！**
    - 
 </details>
 <details>
-<summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
+<summary><code><strong>「 I'm not a newbie! I'm really not a newbie! I want to play tricks! I want to open up high-end gameplay！ 」</strong></code></summary>
    
-4. 使用自己的`优选域名`/`优选IP`的订阅内容：
-   - 如果你想使用自己的优选域名或者是自己的优选IP，可以参考 [WorkerVless2sub GitHub 仓库](https://github.com/cmliu/WorkerVless2sub) 中的部署说明自行搭建。
-   - 在 Pages控制台的 `设置`选项卡，选择 `环境变量`> `制作`> `编辑变量`> `添加变量`；
-   - 变量名设置为`SUB`，对应的值为你部署的订阅生成器地址。例如 `sub.cmliussss.workers.dev`，后点击 **保存**。
-   - 之后在 Pages控制台的 `部署`选项卡，选择 `所有部署`> `最新部署最右的 ...`> `重试部署`，即可。
+4. Use your own `Preferred domain name`/`BestIP` Subscriptions：
+   - If you want to use your own preferred domain name or your own preferred IP, you can refer to [WorkerVless2sub GitHub storehouse](https://github.com/cmliu/WorkerVless2sub) Build it yourself using the deployment instructions in 。
+   - In the Pages console `set up` tab, select `Environment variables` > `Production` > `Editing variables` > `Add variables`；
+   - The variable name is set to `SUB`，The corresponding value is the address of the subscription generator you deployed. 。For Example: `sub.cmliussss.workers.dev`，Then click **Save**。
+   - Then in the Pages console `Deploy` tab, select `All deployments` > `The latest deployment is the rightmost ...`> `重试部署`，You can。
    - 注意，如果您使用了自己的订阅地址，要求订阅生成器的 `SUB`域名 和 `[YOUR-PAGES-URL]`的域名 不同属一个顶级域名，否则会出现异常。您可以在 `SUB` 变量赋值为 Pages.dev 分配到的域名。
 
 </details>
