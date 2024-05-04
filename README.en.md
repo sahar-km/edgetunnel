@@ -44,7 +44,7 @@ The author reserves the right to update this disclaimer at any time without prio
 
 2.  Access subscription content:
     -   access`https://[YOUR-WORKERS-URL]/[UUID]`Subscription content is available.
-    -   例如 `https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`This is your universal adaptive subscription address.
+    -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`This is your universal adaptive subscription address.
     -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64 subscription format, suitable for PassWall, SSR+, etc.
     -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`Clash subscription format, suitable for OpenClash, etc.
     -   For example`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox subscription format, suitable for singbox, etc.
@@ -69,7 +69,7 @@ The author reserves the right to update this disclaimer at any time without prio
 1.  Deploy Cloudflare Pages:
     -   download[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)file and click Star!!!
     -   Select in the Cloudflare Pages console`上传资产`Finally, give your project a name and click`创建项目`, and then upload the downloaded[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Click after the file`部署站点`。
-    -   After deployment is complete, click`继续处理站点`After that, select`设置`>`环境变量`>**make**Define variables for production >`添加变量`.
+    -   After deployment is complete, click`继续处理站点`After that, select`设置`>`环境变量`>**make**Define variables for production environment >`添加变量`.
         Fill in the variable name**UUID**, the value is your UUID, then click`保存`That’s it.
     -   return`部署`tab, click in the lower right corner`创建新部署`Then re-upload[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Click after the file`保存并部署`That’s it.
 
@@ -145,9 +145,9 @@ The author reserves the right to update this disclaimer at any time without prio
 | SOCKS5        | user:[password@127.0.0.1](mailto:password@127.0.0.1):1080                                                                                                      | Preferred as a SOCKS5 proxy for accessing CloudFlareCDN sites                                                                               | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=826s)  |
 | SUB           | sub.cmliussss.workers.dev                                                                                                                                      | Subscription generator address with built-in domain name and IP node information                                                            | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1193s) |
 | subapi        | api.v1.mk                                                                                                                                                      | clash, singbox, etc. subscription conversion backend                                                                                        | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1446s) |
-| SUBCONFIG     | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) | clash, singbox, etc. Subscription conversion profiles                                                                                       | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1605s) |
+| SUBCONFIG     | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) | clash, singbox, etc. Subscription conversion profile                                                                                        | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1605s) |
 | RPROXYIP      | false                                                                                                                                                          | Set to true to force the acquisition of the ProxyIP assigned by the subscriber (requires subscriber support)                                | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1816s) |
-| 02            | <https://t.me/CMLiussss>                                                                                                                                       | Home page 302 jump (supports multiple URLs, used between URLs)`,`Or line break as a spacer, don’t use it if you are new to it)              |                                                              |
+| 02            | <https://t.me/CMLiussss>                                                                                                                                       | Home page 302 jump (supports multiple URLs, used between URLs)`,`Or line feed as a spacer, don’t use it if you are new to it)               |                                                              |
 | URL           | <https://t.me/CMLiussss>                                                                                                                                       | Homepage disguise (supports multiple URLs, used between URLs)`,`Or line breaks as intervals, random settings can easily trigger anti-fraud) |                                                              |
 
 ## Star stars rise
@@ -162,4 +162,4 @@ The author reserves the right to update this disclaimer at any time without prio
 
 # grateful
 
-[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize and destroy](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-baby](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Shegs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
+[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize it](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-baby](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Shegs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
