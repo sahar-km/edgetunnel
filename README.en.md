@@ -14,7 +14,7 @@ This disclaimer applies to the “edgetunnel” project on GitHub (hereinafter r
 
 ### use
 
-This project is designed and developed for learning, research and safety testing purposes only. It aims to provide security researchers, academics and technology enthusiasts with a tool to understand and practice network communication technology.
+This project is designed and developed for learning, research and safety testing purposes only. It aims to provide security researchers, academics, and technology enthusiasts with a tool to understand and practice network communication technologies.
 
 ### legality
 
@@ -22,7 +22,7 @@ Users must comply with local laws and regulations when downloading and using thi
 
 ### Disclaimer
 
-1.  As the author of this project, I (hereinafter referred to as the "Author") emphasize that this project should be used only for legal, ethical, and educational purposes.
+1.  As the author of this project, I (hereinafter referred to as the "Author") emphasize that this project should be used only for legal, ethical and educational purposes.
 2.  The author does not encourage, support or promote any form of illegal use of this project. If this project is found to be used for illegal or unethical activities, the author will strongly condemn such behavior.
 3.  The author is not responsible for any illegal activities carried out by any person or group using this project. Any consequences arising from the use of this project shall be borne by the user himself.
 4.  The author is not responsible for any direct or indirect damages that may arise from the use of this project.
@@ -60,7 +60,7 @@ The author reserves the right to update this disclaimer at any time without prio
 4.  use your own`优选域名`/`优选IP`Subscriptions for:
     -   If you want to use your own preferred domain name or your own preferred IP, you can refer to[WorkerVless2sub GitHub repository](https://github.com/cmliu/WorkerVless2sub)Build it yourself according to the deployment instructions in .
     -   Open[worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)file, found on line 12`sub`variable and modify it to the address of your deployed subscription generator. For example`let sub = 'sub.cmliussss.workers.dev';`, be careful not to include protocol information and symbols such as https.
-    -   Note that if you use your own subscription address, ask the subscription generator`sub`domain name and`[YOUR-WORKER-URL]`The domain name does not belong to the same top-level domain name, otherwise an exception will occur. You can`sub`The variable is assigned the domain name assigned to workers.dev.
+    -   Note that if you use your own subscription address, the subscription generator's`sub`domain name and`[YOUR-WORKER-URL]`The domain name does not belong to the same top-level domain name, otherwise an exception will occur. You can`sub`The variable is assigned the domain name assigned to workers.dev.
 
 </details>
 
@@ -69,7 +69,7 @@ The author reserves the right to update this disclaimer at any time without prio
 1.  Deploy Cloudflare Pages:
     -   download[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)file and click Star!!!
     -   Select in the Cloudflare Pages console`上传资产`Finally, give your project a name and click`创建项目`, and then upload the downloaded[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Click after the file`部署站点`。
-    -   After deployment is complete, click`继续处理站点`After that, select`设置`>`环境变量`>**make**Define variables for production environment >`添加变量`.
+    -   After deployment is complete, click`继续处理站点`After that, select`设置`>`环境变量`>**make**Define variables for production >`添加变量`.
         Fill in the variable name**UUID**, the value is your UUID, then click`保存`That’s it.
     -   return`部署`tab, click in the lower right corner`创建新部署`Then re-upload[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Click after the file`保存并部署`That’s it.
 
@@ -132,7 +132,7 @@ The author reserves the right to update this disclaimer at any time without prio
     -   In the Pages console`设置`tab, select`环境变量`>`制作`>`编辑变量`>`添加变量`；
     -   The variable name is set to`SUB`, the corresponding value is the address of the subscription generator you deployed. For example`sub.cmliussss.workers.dev`, then click**keep**。
     -   Then in the Pages console`部署`tab, select`所有部署`>`最新部署最右的 ...`>`重试部署`, that’s it.
-    -   Note that if you use your own subscription address, ask the subscription generator`SUB`domain name and`[YOUR-PAGES-URL]`The domain name does not belong to the same top-level domain name, otherwise an exception will occur. You can`SUB`The variable is assigned the domain name assigned to Pages.dev.
+    -   Note that if you use your own subscription address, the subscription generator's`SUB`domain name and`[YOUR-PAGES-URL]`The domain name does not belong to the same top-level domain name, otherwise an exception will occur. You can`SUB`The variable is assigned the domain name assigned to Pages.dev.
 
 </details>
 
