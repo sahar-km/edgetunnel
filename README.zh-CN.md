@@ -76,7 +76,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
 2.  访问订阅内容：
     -   访问`https://[YOUR-PAGES-URL]/[YOUR-UUID]`即可获取订阅内容。
     -   例如`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`就是你的通用自适应订阅地址。
-    -   例如 `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64订阅格式，适用PassWall,SSR+等。
+    -   例如`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64订阅格式，适用PassWall,SSR+等。
     -   例如`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`Clash订阅格式，适用OpenClash等。
     -   例如`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox订阅格式，适用singbox等。
 
@@ -129,7 +129,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
 
 4.  使用自己的`优选域名`/`优选IP`的订阅内容：
     -   如果你想使用自己的优选域名或者是自己的优选IP，可以参考[WorkerVless2sub GitHub 仓库](https://github.com/cmliu/WorkerVless2sub)中的部署说明自行搭建。
-    -   在 Pages控制台的`设置`选项卡，选择`环境变量`> `制作`>`编辑变量`>`添加变量`；
+    -   在 Pages控制台的`设置`选项卡，选择`环境变量`>`制作`>`编辑变量`>`添加变量`；
     -   变量名设置为`SUB`，对应的值为你部署的订阅生成器地址。例如`sub.cmliussss.workers.dev`，后点击**保存**。
     -   之后在 Pages控制台的`部署`选项卡，选择`所有部署`>`最新部署最右的 ...`>`重试部署`，即可。
     -   注意，如果您使用了自己的订阅地址，要求订阅生成器的`SUB`域名 和`[YOUR-PAGES-URL]`的域名 不同属一个顶级域名，否则会出现异常。您可以在`SUB`变量赋值为 Pages.dev 分配到的域名。
