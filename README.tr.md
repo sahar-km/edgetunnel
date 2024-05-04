@@ -14,7 +14,7 @@ Bu sorumluluk reddi beyanı GitHub'daki "edgetunnel" projesi (bundan sonra "proj
 
 ### kullanmak
 
-Bu proje yalnızca öğrenme, araştırma ve güvenlik testi amacıyla tasarlanmış ve geliştirilmiştir. Güvenlik araştırmacılarına, akademisyenlere ve teknoloji meraklılarına ağ iletişim teknolojisini anlama ve uygulama konusunda bir araç sağlamayı amaçlamaktadır.
+Bu proje yalnızca öğrenme, araştırma ve güvenlik testi amacıyla tasarlanmış ve geliştirilmiştir. Güvenlik araştırmacılarına, akademisyenlere ve teknoloji meraklılarına ağ iletişim teknolojisini anlamak ve uygulamak için bir araç sağlamayı amaçlamaktadır.
 
 ### yasallık
 
@@ -58,8 +58,8 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 <summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
 
 4.  Kendininkini kullan`优选域名`/`优选IP`Şunun için abonelikler:
-    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub)içindeki dağıtım talimatlarına göre kendiniz oluşturun.
-    -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js) 文件，在第 12 行找到 `sub`değişkeni seçin ve konuşlandırılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
+    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub).txt dosyasındaki dağıtım talimatlarına göre kendiniz oluşturun.
+    -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)dosya, 12. satırda bulundu`sub`değişkeni seçin ve bunu dağıtılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
     -   Kendi abonelik adresinizi kullanıyorsanız abonelik oluşturucuya sormayı unutmayın.`sub`alan adı ve`[YOUR-WORKER-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`sub`Değişkene,workers.dev'e atanan alan adı atanır.
 
 </details>
@@ -69,7 +69,7 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 1.  Cloudflare Sayfalarını Dağıtın:
     -   indirmek[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)dosyanızı açın ve Yıldız'a tıklayın!!!
     -   Cloudflare Sayfaları konsolunda seçin`上传资产`Son olarak projenize bir isim verin ve tıklayın.`创建项目`ve ardından indirilenleri yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`部署站点`。
-    -   Dağıtım tamamlandıktan sonra tıklayın`继续处理站点` 后，选择 `设置`>`环境变量`>**yapmak**Üretim için değişkenleri tanımlayın >`添加变量`.
+    -   Dağıtım tamamlandıktan sonra tıklayın`继续处理站点`Bundan sonra seçin`设置`>`环境变量`>**yapmak**Üretim ortamı için değişkenleri tanımlayın >`添加变量`.
         Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`保存`Bu kadar.
     -   geri dönmek`部署`sekmesinde sağ alt köşedeki simgesine tıklayın`创建新部署`Daha sonra yeniden yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`保存并部署`Bu kadar.
 
@@ -128,7 +128,7 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 <summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
 
 4.  Kendininkini kullan`优选域名`/`优选IP`Şunun için abonelikler:
-    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub)içindeki dağıtım talimatlarına göre kendiniz oluşturun.
+    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub).txt dosyasındaki dağıtım talimatlarına göre kendiniz oluşturun.
     -   Sayfalar konsolunda`设置`sekme, seç`环境变量`>`制作`>`编辑变量`>`添加变量`；
     -   Değişken adı şu şekilde ayarlandı:`SUB`karşılık gelen değer, dağıttığınız abonelik oluşturucunun adresidir. Örneğin`sub.cmliussss.workers.dev`, ardından tıklayın**kale**。
     -   Daha sonra Sayfalar konsolunda`部署`sekme, seç`所有部署`>`最新部署最右的 ...`>`重试部署`, bu kadar.
@@ -145,9 +145,9 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 | ÇORAP5           | kullanıcı:[password@127.0.0.1](mailto:password@127.0.0.1):1080                                                                                                 | CloudFlareCDN sitelerine erişim için SOCKS5 proxy'si olarak tercih edilir                                                                                                          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=826s)  |
 | ALT              | sub.cmliussss.workers.dev                                                                                                                                      | Yerleşik alan adı ve IP düğümü bilgileriyle birlikte abonelik oluşturucu adresi                                                                                                    | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1193s) |
 | subapi           | api.v1.mk                                                                                                                                                      | Clash, singbox vb. abonelik dönüşümü arka ucu                                                                                                                                      | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1446s) |
-| ALT YAPILANDIRMA | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) | Clash, singbox vb. Abonelik dönüşüm profilleri                                                                                                                                     | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1605s) |
+| ALT YAPILANDIRMA | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) | Clash, singbox vb. Abonelik dönüşüm profili                                                                                                                                        | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1605s) |
 | RPROXYIP         | YANLIŞ                                                                                                                                                         | Abone tarafından atanan ProxyIP'nin alınmasını zorlamak için true olarak ayarlayın (abone desteği gerektirir)                                                                      | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1816s) |
-| 02               | <https://t.me/CMLiussss>                                                                                                                                       | Ana sayfa 302 atlaması (URL'ler arasında kullanılan birden fazla URL'yi destekler)`,`Veya satır sonunu aralayıcı olarak kullanın, eğer bu konuda yeniyseniz kullanmayın)           |                                                              |
+| 02               | <https://t.me/CMLiussss>                                                                                                                                       | Ana sayfa 302 atlaması (URL'ler arasında kullanılan birden fazla URL'yi destekler)`,`Veya satır beslemeyi aralayıcı olarak kullanın, eğer bu konuda yeniyseniz kullanmayın)        |                                                              |
 | URL'si           | <https://t.me/CMLiussss>                                                                                                                                       | Ana sayfa gizleme (URL'ler arasında kullanılan birden fazla URL'yi destekler)`,`Veya aralıklı satır kesintileri, rastgele ayarlar dolandırıcılığı önlemeyi kolayca tetikleyebilir) |                                                              |
 
 ## Yıldız yıldızlar yükseliyor
@@ -162,4 +162,4 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 
 # minnettar
 
-[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize edin ve yok edin](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-bebek](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Shegs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
+[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize et](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-bebek](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Shegs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
