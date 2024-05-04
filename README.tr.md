@@ -1,34 +1,20 @@
 # Cloudflare Worker 2 V'siz ve Alt
 
-Bu, Cloudflare Worker platformunu temel alan bir komut dosyasıdır. Orijinal sürüme dayalı olarak, VLESS yapılandırma bilgilerini görüntüleyecek ve abonelik içeriğine dönüştürecek şekilde değiştirildi. Bu betiği kullanarak VLESS yapılandırma bilgilerini çevrimiçi yapılandırmayı kullanarak Clash veya Singbox gibi araçlara kolayca dönüştürebilirsiniz.
+🇮🇷[Farsça](README-fa.md)
+
+🇹🇷[Türkçe](README.tr.md)
+
+🇬🇧[İngilizce](README.MD)
+
+🇨🇳[Çince](README.zh-CN.md)
+
+Bu, Cloudflare Worker platformunu temel alan bir komut dosyasıdır. Orijinal sürüme dayanarak, VLESS yapılandırma bilgilerini görüntüleyecek ve abonelik içeriğine dönüştürecek şekilde değiştirildi. Bu betiği kullanarak VLESS yapılandırma bilgilerini çevrimiçi yapılandırmayı kullanarak Clash veya Singbox gibi araçlara kolayca dönüştürebilirsiniz.
 
 -   Temel dağıtım video eğitimi:<https://www.youtube.com/watch?v=LeT4jQUh8ok>
 -   Hızlı dağıtım video eğitimi:<https://www.youtube.com/watch?v=59THrmJhmAw>**_En iyi öneri!!!_**
 -   Perspektifi kullanma konusunda ileri düzey eğitim:<https://www.youtube.com/watch?v=s91zjpw3-P8>
 
 Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
-
-# Sorumluluk reddi beyanı
-
-Bu sorumluluk reddi GitHub'daki "edgetunnel" projesi (bundan sonra "proje" olarak anılacaktır) için geçerlidir, proje bağlantısı şöyledir:<https://github.com/cmliu/edgetunnel>
-
-### kullanmak
-
-Bu proje yalnızca öğrenme, araştırma ve güvenlik testi amacıyla tasarlanmış ve geliştirilmiştir. Güvenlik araştırmacılarına, akademisyenlere ve teknoloji meraklılarına ağ iletişim teknolojilerini anlama ve uygulama konusunda bir araç sağlamayı amaçlamaktadır.
-
-### yasallık
-
-Kullanıcılar bu projeyi indirirken ve kullanırken yerel yasa ve düzenlemelere uymalıdır. Kullanıcılar, eylemlerinin kendi bölgelerindeki yasalara, düzenlemelere ve diğer geçerli gereksinimlere uygun olmasını sağlamaktan sorumludur.
-
-### Sorumluluk reddi beyanı
-
-1.  Bu projenin yazarı olarak ben (bundan sonra "Yazar" olarak anılacaktır), bu projenin yalnızca yasal, etik ve eğitim amaçlı kullanılması gerektiğini vurgularım.
-2.  Yazar, bu projenin herhangi bir şekilde yasa dışı kullanımını teşvik etmez, desteklemez veya teşvik etmez. Bu projenin yasadışı veya etik olmayan faaliyetler için kullanıldığı tespit edilirse yazar bu tür davranışları şiddetle kınayacaktır.
-3.  Yazar, bu projeyi kullanan herhangi bir kişi veya grubun gerçekleştirdiği yasa dışı faaliyetlerden sorumlu değildir. Bu projenin kullanımından doğacak her türlü sonuç kullanıcının kendisi tarafından karşılanacaktır.
-4.  Bu projenin kullanımından doğabilecek doğrudan veya dolaylı hiçbir zarardan yazar sorumlu değildir.
-5.  Kullanıcılar bu projeyi kullanarak bu sorumluluk reddi beyanının tüm şartlarını anladıklarını ve kabul ettiklerini belirtirler. Kullanıcı bu şartları kabul etmiyorsa projeyi kullanmayı derhal bırakmalıdır.
-
-Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaksızın güncelleme hakkını saklı tutar. Sorumluluk reddi beyanının en son sürümü projenin GitHub sayfasında yayınlanacaktır.
 
 ## risk uyarısı
 
@@ -44,22 +30,22 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 
 2.  Abonelik içeriğine erişin:
     -   erişim`https://[YOUR-WORKERS-URL]/[UUID]`Abonelik içeriği mevcuttur.
-    -   Örneğin`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`Bu sizin evrensel uyarlanabilir abonelik adresinizdir.
-    -   Örneğin`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64 abonelik formatı; PassWall, SSR+ vb. için uygundur.
-    -   Örneğin`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`OpenClash vb. için uygun Clash abonelik formatı.
-    -   Örneğin`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox abonelik formatı, singbox vb. için uygundur.
+    -   Örneğin abonelik bağlantınız şöyle olacaktır:`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`Bu sizin evrensel uyarlanabilir abonelik adresinizdir.
+    -   Base64 abonelik formatı:`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`PassWall, SSR+ vb. için uygundur.
+    -   Clash abonelik biçimi`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`OpenClash vb. için uygundur.
+    -   şarkı kutusu abonelik formatı`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`şarkı kutusu vb. için uygundur.
 
 3.  Çalışanlara özel bir alan adı bağlayın:
-    -   İşçi konsolunda`触发器`sekme, aşağıya tıklayın`添加自定义域`。
-    -   CloudFlare alan adı çözümleme hizmetine aktardığınız ikincil alan adını girin, örneğin:`vless.google.com`Tıkladıktan sonra`添加自定义域`, sertifikanın geçerli olmasını bekleyin.
+    -   İşçi konsolunda`trigger`sekme, aşağıya tıklayın`Add a custom domain`。
+    -   CloudFlare alan adı çözümleme hizmetine aktardığınız ikincil alan adını girin, örneğin:`vless.google.com`Tıkladıktan sonra`Add a custom domain`, sertifikanın geçerli olmasını bekleyin.
     -   **Eğer acemiyseniz, daha fazla bakmanıza gerek kalmadan hemen şimdi yola çıkabilirsiniz! ! !**
 
 <details>
-<summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
+<summary><code><strong>「 I'm not a newbie! I'm really, really not a newbie! I want to try some tricks! I want to start playing with advanced techniques! 」</strong></code></summary>
 
-4.  Kendininkini kullan`优选域名`/`优选IP`Şunun için abonelikler:
+4.  Kendininkini kullan`Preferred domain name`/`BestIP`Şunun için abonelikler:
     -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub).txt dosyasındaki dağıtım talimatlarına göre kendiniz oluşturun.
-    -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)dosya, 12. satırda bulundu`sub`değişkeni seçin ve konuşlandırılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
+    -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)dosya, 12. satırda bulundu`sub`değişkeni seçin ve bunu dağıtılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
     -   Kendi abonelik adresinizi kullanırsanız abonelik oluşturucunun`sub`alan adı ve`[YOUR-WORKER-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`sub`Değişkene,workers.dev'e atanan alan adı atanır.
 
 </details>
@@ -68,37 +54,37 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 
 1.  Cloudflare Sayfalarını Dağıtın:
     -   indirmek[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)dosyanızı açın ve Yıldız'a tıklayın!!!
-    -   Cloudflare Sayfaları konsolunda seçin`上传资产`Son olarak projenize bir isim verin ve tıklayın.`创建项目`ve ardından indirilenleri yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`部署站点`。
-    -   Dağıtım tamamlandıktan sonra tıklayın`继续处理站点`Bundan sonra seçin`设置`>`环境变量`>**yapmak**Üretim için değişkenleri tanımlayın >`添加变量`.
-        Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`保存`Bu kadar.
-    -   geri dönmek`部署`sekmesinde sağ alt köşedeki simgesine tıklayın`创建新部署`Daha sonra yeniden yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`保存并部署`Bu kadar.
+    -   Cloudflare Sayfaları konsolunda seçin`Upload assets`Son olarak projenize bir isim verin ve tıklayın.`Create a project`ve ardından indirilenleri yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`Deployment Site`。
+    -   Dağıtım tamamlandıktan sonra tıklayın`Continue processing site`Bundan sonra seçin`set up`>`Environment variables`>**yapmak**Üretim için değişkenleri tanımlayın >`Add variables`.
+        Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`keep`Bu kadar.
+    -   geri dönmek`Deploy`sekmesinde sağ alt köşedeki simgesine tıklayın`Create a New Deployment`Daha sonra yeniden yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`Save and deploy`Bu kadar.
 
 2.  Abonelik içeriğine erişin:
     -   erişim`https://[YOUR-PAGES-URL]/[YOUR-UUID]`Abonelik içeriği mevcuttur.
-    -   Örneğin`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`Bu sizin evrensel uyarlanabilir abonelik adresinizdir.
-    -   Örneğin`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`Base64 abonelik formatı; PassWall, SSR+ vb. için uygundur.
-    -   Örneğin`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`OpenClash vb. için uygun Clash abonelik formatı.
-    -   Örneğin`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox abonelik formatı, singbox vb. için uygundur.
+    -   Örneğin abonelik bağlantınız şöyle olacaktır:`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`Bu sizin evrensel uyarlanabilir abonelik adresinizdir.
+    -   Base64 abonelik formatı:`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`PassWall, SSR+ vb. için uygundur.
+    -   Clash abonelik formatı:`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`OpenClash vb. için uygundur.
+    -   şarkı kutusu abonelik formatı`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`şarkı kutusu vb. için uygundur.
 
 <details>
-<summary><code><strong>「 我自己有域名！我要绑定自己的域名！我已经熟练的掌握域名解析！ 」</strong></code></summary>
+<summary><code><strong>「 I have my own domain name! I want to bind my own domain name! I have mastered domain name resolution! 」</strong></code></summary>
    
-3. 给 Pages绑定 CNAME自定义域：[视频教程](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
-   - 在 Pages控制台的 `自定义域`选项卡，下方点击 `设置自定义域`。
-   - 填入你的自定义次级域名，注意不要使用你的根域名，例如：
-     您分配到的域名是 `fuck.cloudns.biz`，则添加自定义域填入 `lizi.fuck.cloudns.biz`即可；
-   - 按照 Cloudflare 的要求将返回你的域名DNS服务商，添加 该自定义域 `lizi`的 CNAME记录 `edgetunnel.pages.dev` 后，点击 `激活域`即可。
-   - **如果你是小白，那么你的 pages 绑定`自定义域`之后即可直接起飞，不用再往下看了！！！**
+3. Bind a CNAME custom domain to Pages: [Video Tutorial](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
+   - In the Pages console `Custom domains` tab, click below `Set up a custom domain` 。
+   - Fill in your custom subdomain name, be careful not to use your root domain name, for example：
+     The domain name you are assigned is `fuck.cloudns.biz` ，Add a custom field to fill in `lizi.fuck.cloudns.biz` You can；
+   - According to Cloudflare's requirements, your domain name DNS service provider will be returned, and the custom domain will be added `lizi` CNAME record for `edgetunnel.pages.dev` Then click on `Activate Domain` You can。
+   - **If you are new, then your pages binding `Custom domains` After that, you can take off directly without looking down.！！！**
    - 
 </details>
 <details>
-<summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
+<summary><code><strong>「 I'm not a newbie! I'm really not a newbie! I want to play tricks! I want to open up high-end gameplay！ 」</strong></code></summary>
    
-4. 使用自己的`优选域名`/`优选IP`的订阅内容：
-   - 如果你想使用自己的优选域名或者是自己的优选IP，可以参考 [WorkerVless2sub GitHub 仓库](https://github.com/cmliu/WorkerVless2sub) 中的部署说明自行搭建。
-   - 在 Pages控制台的 `设置`选项卡，选择 `环境变量`> `制作`> `编辑变量`> `添加变量`；
-   - 变量名设置为`SUB`，对应的值为你部署的订阅生成器地址。例如 `sub.cmliussss.workers.dev`，后点击 **保存**。
-   - 之后在 Pages控制台的 `部署`选项卡，选择 `所有部署`> `最新部署最右的 ...`> `重试部署`，即可。
+4. Use your own `Preferred domain name`/`BestIP` Subscriptions：
+   - If you want to use your own preferred domain name or your own preferred IP, you can refer to [WorkerVless2sub GitHub storehouse](https://github.com/cmliu/WorkerVless2sub) Build it yourself using the deployment instructions in 。
+   - In the Pages console `set up` tab, select `Environment variables` > `Production` > `Editing variables` > `Add variables`；
+   - The variable name is set to `SUB`，The corresponding value is the address of the subscription generator you deployed. 。For Example: `sub.cmliussss.workers.dev`，Then click **Save**。
+   - Then in the Pages console `Deploy` tab, select `All deployments` > `The latest deployment is the rightmost ...`> `重试部署`，You can。
    - 注意，如果您使用了自己的订阅地址，要求订阅生成器的 `SUB`域名 和 `[YOUR-PAGES-URL]`的域名 不同属一个顶级域名，否则会出现异常。您可以在 `SUB` 变量赋值为 Pages.dev 分配到的域名。
 
 </details>
@@ -162,4 +148,4 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 
 # minnettar
 
-[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize et](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-bebek](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Shegs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
+[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize et](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-bebek](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Sheggs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
