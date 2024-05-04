@@ -15,14 +15,10 @@ jobs:
         with:
           node-version: 12.x
       # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
-      - name: Adding README - Chinese Simplified
+      - name: Adding README - English
         uses: dephraiim/translate-readme@main
         with:
-          LANG: zh-CN
-      - name: Adding README - Chinese Traditional
-        uses: dephraiim/translate-readme@main
-        with:
-          LANG: zh-TW
+          LANG: en
       - name: Adding README - Persian
         uses: dephraiim/translate-readme@main
         with:
@@ -31,7 +27,7 @@ jobs:
         uses: dephraiim/translate-readme@main
         with:
           LANG: tr
-      - name: Adding README - English
+      - name: Adding README - Chinese Simplified
         uses: dephraiim/translate-readme@main
         with:
-          LANG: en       
+          LANG: zh-CN      
