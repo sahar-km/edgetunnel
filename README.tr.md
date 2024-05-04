@@ -10,11 +10,11 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
 
 # Sorumluluk reddi beyanı
 
-Bu sorumluluk reddi beyanı GitHub'daki "edgetunnel" projesi (bundan sonra "proje" olarak anılacaktır) için geçerlidir, proje bağlantısı şöyledir:<https://github.com/cmliu/edgetunnel>
+Bu sorumluluk reddi GitHub'daki "edgetunnel" projesi (bundan sonra "proje" olarak anılacaktır) için geçerlidir, proje bağlantısı şöyledir:<https://github.com/cmliu/edgetunnel>
 
 ### kullanmak
 
-Bu proje yalnızca öğrenme, araştırma ve güvenlik testi amacıyla tasarlanmış ve geliştirilmiştir. Güvenlik araştırmacılarına, akademisyenlere ve teknoloji meraklılarına ağ iletişim teknolojisini anlamak ve uygulamak için bir araç sağlamayı amaçlamaktadır.
+Bu proje yalnızca öğrenme, araştırma ve güvenlik testi amacıyla tasarlanmış ve geliştirilmiştir. Güvenlik araştırmacılarına, akademisyenlere ve teknoloji meraklılarına ağ iletişim teknolojilerini anlama ve uygulama konusunda bir araç sağlamayı amaçlamaktadır.
 
 ### yasallık
 
@@ -26,7 +26,7 @@ Kullanıcılar bu projeyi indirirken ve kullanırken yerel yasa ve düzenlemeler
 2.  Yazar, bu projenin herhangi bir şekilde yasa dışı kullanımını teşvik etmez, desteklemez veya teşvik etmez. Bu projenin yasadışı veya etik olmayan faaliyetler için kullanıldığı tespit edilirse yazar bu tür davranışları şiddetle kınayacaktır.
 3.  Yazar, bu projeyi kullanan herhangi bir kişi veya grubun gerçekleştirdiği yasa dışı faaliyetlerden sorumlu değildir. Bu projenin kullanımından doğacak her türlü sonuç kullanıcının kendisi tarafından karşılanacaktır.
 4.  Bu projenin kullanımından doğabilecek doğrudan veya dolaylı hiçbir zarardan yazar sorumlu değildir.
-5.  Kullanıcılar bu projeyi kullanarak bu sorumluluk reddi beyanının tüm şartlarını anladıklarını ve kabul ettiklerini belirtmiş olurlar. Kullanıcı bu şartları kabul etmiyorsa projeyi kullanmayı derhal bırakmalıdır.
+5.  Kullanıcılar bu projeyi kullanarak bu sorumluluk reddi beyanının tüm şartlarını anladıklarını ve kabul ettiklerini belirtirler. Kullanıcı bu şartları kabul etmiyorsa projeyi kullanmayı derhal bırakmalıdır.
 
 Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaksızın güncelleme hakkını saklı tutar. Sorumluluk reddi beyanının en son sürümü projenin GitHub sayfasında yayınlanacaktır.
 
@@ -59,8 +59,8 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 
 4.  Kendininkini kullan`优选域名`/`优选IP`Şunun için abonelikler:
     -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub).txt dosyasındaki dağıtım talimatlarına göre kendiniz oluşturun.
-    -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)dosya, 12. satırda bulundu`sub`değişkeni seçin ve bunu dağıtılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
-    -   Kendi abonelik adresinizi kullanıyorsanız abonelik oluşturucuya sormayı unutmayın.`sub`alan adı ve`[YOUR-WORKER-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`sub`Değişkene,workers.dev'e atanan alan adı atanır.
+    -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)dosya, 12. satırda bulundu`sub`değişkeni seçin ve konuşlandırılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
+    -   Kendi abonelik adresinizi kullanırsanız abonelik oluşturucunun`sub`alan adı ve`[YOUR-WORKER-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`sub`Değişkene,workers.dev'e atanan alan adı atanır.
 
 </details>
 
@@ -69,7 +69,7 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
 1.  Cloudflare Sayfalarını Dağıtın:
     -   indirmek[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)dosyanızı açın ve Yıldız'a tıklayın!!!
     -   Cloudflare Sayfaları konsolunda seçin`上传资产`Son olarak projenize bir isim verin ve tıklayın.`创建项目`ve ardından indirilenleri yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`部署站点`。
-    -   Dağıtım tamamlandıktan sonra tıklayın`继续处理站点`Bundan sonra seçin`设置`>`环境变量`>**yapmak**Üretim ortamı için değişkenleri tanımlayın >`添加变量`.
+    -   Dağıtım tamamlandıktan sonra tıklayın`继续处理站点`Bundan sonra seçin`设置`>`环境变量`>**yapmak**Üretim için değişkenleri tanımlayın >`添加变量`.
         Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`保存`Bu kadar.
     -   geri dönmek`部署`sekmesinde sağ alt köşedeki simgesine tıklayın`创建新部署`Daha sonra yeniden yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`保存并部署`Bu kadar.
 
@@ -132,7 +132,7 @@ Yazar, bu sorumluluk reddini herhangi bir zamanda önceden bildirimde bulunmaks�
     -   Sayfalar konsolunda`设置`sekme, seç`环境变量`>`制作`>`编辑变量`>`添加变量`；
     -   Değişken adı şu şekilde ayarlandı:`SUB`karşılık gelen değer, dağıttığınız abonelik oluşturucunun adresidir. Örneğin`sub.cmliussss.workers.dev`, ardından tıklayın**kale**。
     -   Daha sonra Sayfalar konsolunda`部署`sekme, seç`所有部署`>`最新部署最右的 ...`>`重试部署`, bu kadar.
-    -   Kendi abonelik adresinizi kullanıyorsanız abonelik oluşturucuya sormayı unutmayın.`SUB`alan adı ve`[YOUR-PAGES-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`SUB`Değişkene Pages.dev'e atanan alan adı atanır.
+    -   Kendi abonelik adresinizi kullanırsanız abonelik oluşturucunun`SUB`alan adı ve`[YOUR-PAGES-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`SUB`Değişkene Pages.dev'e atanan alan adı atanır.
 
 </details>
 
