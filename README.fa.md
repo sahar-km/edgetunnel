@@ -1,6 +1,6 @@
 # Cloudflare Worker 2 Vless & Sub
 
-🇮🇷[فارسی](README-fa.md)
+🇮🇷[فارسی](README.fa.md)
 
 🇹🇷[ترکی](README.tr.md)
 
@@ -64,7 +64,7 @@
     -   به عنوان مثال لینک اشتراک شما این خواهد بود:`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`این آدرس اشتراک تطبیقی ​​جهانی شماست.
     -   فرمت اشتراک Base64:`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub`مناسب برای PassWall، SSR+ و غیره
     -   فرمت اشتراک کلش:`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`مناسب برای OpenClash و غیره
-    -   فرمت اشتراک singbox`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb` suitable for singbox, etc.
+    -   فرمت اشتراک singbox`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`مناسب برای singbox و غیره
 
 <details>
 <summary><code><strong>「 I have my own domain name! I want to bind my own domain name! I have mastered domain name resolution! 」</strong></code></summary>
@@ -124,7 +124,7 @@
 
 ### توضیحات متغیر
 
-| نام متغیر    | مثال                                                                                                                                                           | Remark                                                                                                                                                                                      | YT                                                           |
+| نام متغیر    | مثال                                                                                                                                                           | تذکر دهید                                                                                                                                                                                   | YT                                                           |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | UUID         | 90SD4AH-141A-43SS-991B-08263SVISES10                                                                                                                           | Powershell -NoExit -Command "[راهنما]&#x3A;:NewGuid()"                                                                                                                                      | [ویدئو](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s)   |
 | آی پی پروکسی | proxyip.fxxk.dedyn.io                                                                                                                                          | جایگزین به عنوان یک گره پروکسی برای دسترسی به سایت CloudFlareCDN (پشتیبانی از ProxyIP های متعدد، مورد استفاده بین ProxyIP ها`,`یا تغذیه خط به عنوان فاصله)                                  | [ویدئو](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s)  |
@@ -148,4 +148,4 @@
 
 # سپاسگزار
 
-[zizifn](https://github.com/zizifn/edgetunnel)、[آن را استریل کنید](https://github.com/3Kmfi6HP/EDtunnel)、[استنلی عزیزم](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Sheggs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
+[zizifn](https://github.com/zizifn/edgetunnel)、[آن را استریل کنید](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-baby](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Sheggs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
