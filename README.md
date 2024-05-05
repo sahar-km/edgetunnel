@@ -2,7 +2,7 @@
 
 
 
-🇮🇷 [Persian](README-fa.md)  
+🇮🇷 [Persian](README.fa.md)  
 
 
 🇹🇷 [Turkish](README.tr.md)  
