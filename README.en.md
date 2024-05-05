@@ -1,6 +1,6 @@
 # Cloudflare Worker 2 Vless & Sub
 
-🇮🇷[Persian](README-fa.md)
+🇮🇷[Persian](README.fa.md)
 
 🇹🇷[Turkish](README.tr.md)
 
