@@ -1,6 +1,6 @@
 # Cloudflare Worker 2 V'siz ve Alt
 
-🇮🇷[Farsça](README-fa.md)
+🇮🇷[Farsça](README.fa.md)
 
 🇹🇷[Türkçe](README.tr.md)
 
@@ -36,7 +36,7 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
     -   şarkı kutusu abonelik formatı`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`şarkı kutusu vb. için uygundur.
 
 3.  Çalışanlara özel bir alan adı bağlayın:
-    -   İşçi konsolunda`trigger`sekme, aşağıya tıklayın`Add a custom domain`。
+    -   İşçi konsolunda`trigger`sekme, aşağıya tıklayın`Add a custom domain` 。
     -   CloudFlare alan adı çözümleme hizmetine aktardığınız ikincil alan adını girin, örneğin:`vless.google.com`Tıkladıktan sonra`Add a custom domain`, sertifikanın geçerli olmasını bekleyin.
     -   **Eğer acemiyseniz, daha fazla bakmanıza gerek kalmadan hemen şimdi yola çıkabilirsiniz! ! !**
 
@@ -50,7 +50,7 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
 
 </details>
 
-## Sayfa yükleme dağıtım yöntemi**En iyi öneri!!!**[Video öğretici](https://www.youtube.com/watch?v=59THrmJhmAw)
+## Sayfa yükleme dağıtım yöntemi**Best recommendation!!!**[Video öğretici](https://www.youtube.com/watch?v=59THrmJhmAw)
 
 1.  Cloudflare Sayfalarını Dağıtın:
     -   indirmek[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)dosyanızı açın ve Yıldız'a tıklayın!!!
@@ -126,8 +126,8 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
 
 | değişken ismi    | Örnek                                                                                                                                                          | Açıklama                                                                                                                                                                           | YT                                                           |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| UUID             | 90SD4AH-141A-43SS-991B-08263SVISES10                                                                                                                           | Powershell -Çıkış Yok -Komut "[rehber]&#x3A;:YeniGuid()"                                                                                                                           | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s)   |
-| PROXYIP          | proxyip.fxxk.dedyn.io                                                                                                                                          | CloudFlareCDN sitesine erişim için proxy düğümü olarak alternatif (ProxyIP'ler arasında kullanılan birden fazla ProxyIP'yi destekler)`,`veya aralık olarak satır besleme)          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s)  |
+| UUID             | 90SD4AH-141A-43SS-991B-08263SVISES10                                                                                                                           | Powershell -Çıkış Yok -Komut "[rehber]&#x3A;:NewGuid()"                                                                                                                            | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s)   |
+| PROXY IP         | proxyip.fxxk.dedyn.io                                                                                                                                          | CloudFlareCDN sitesine erişim için proxy düğümü olarak alternatif (ProxyIP'ler arasında kullanılan birden fazla ProxyIP'yi destekler)`,`veya aralık olarak satır besleme)          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s)  |
 | ÇORAP5           | kullanıcı:[password@127.0.0.1](mailto:password@127.0.0.1):1080                                                                                                 | CloudFlareCDN sitelerine erişim için SOCKS5 proxy'si olarak tercih edilir                                                                                                          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=826s)  |
 | ALT              | sub.cmliussss.workers.dev                                                                                                                                      | Yerleşik alan adı ve IP düğümü bilgileriyle birlikte abonelik oluşturucu adresi                                                                                                    | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1193s) |
 | subapi           | api.v1.mk                                                                                                                                                      | Clash, singbox vb. abonelik dönüşümü arka ucu                                                                                                                                      | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1446s) |
