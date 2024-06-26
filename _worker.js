@@ -8,7 +8,7 @@ let userID = '90cd4a77-141a-43c9-991b-08263cfe9c10';
 
 //Find proxyIP : https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 //Find proxyIP : https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/#google
-let proxyIP = 'ni.radically.pro';//'cdn.xn--b6gac.eu.org, cdn-all.xn--b6gac.eu.org, workers.cloudflare.cyou'
+let proxyIP = 'usa.revil.link';//'cdn.xn--b6gac.eu.org, cdn-all.xn--b6gac.eu.org, workers.cloudflare.cyou'
 
 let sub = '';// Leave blank to use built-in subscription
 let subconverter = 'subapi-loadbalancing.pages.dev';// clash subscription conversion backend, currently uses CM's subscription conversion function. Comes with fake uuid and host subscription.
