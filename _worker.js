@@ -1235,7 +1235,7 @@ async function getVLESSConfig(userID, hostName, sub, UA, RproxyIP, _url) {
 	}
 
 	if ( userAgent.includes('mozilla') && !subParams.some(_searchParams => _url.searchParams.has(_searchParams))) {
-		let 订阅器 = `您的订阅内容由 ${sub} Provide maintenance support, Automatic acquisition ProxyIP: ${RproxyIP}`;
+		let 订阅器 = `Your subscription is provided by ${sub} Provide maintenance support, Automatic acquisition ProxyIP: ${RproxyIP}`;
 		if (!sub || sub == '') {
 			if (!proxyIP || proxyIP =='') {
 				订阅器 = 'Your subscription is built by addresses/ADD Parameters provided, , It is recommended that you set proxyIP/PROXYIP ！！';
@@ -1247,9 +1247,9 @@ async function getVLESSConfig(userID, hostName, sub, UA, RproxyIP, _url) {
 			else 订阅器 += `, The currently used ProxyIP is empty: ${proxyIPs.join(', ')}`;
 		}
 		return `
-################################################################
+======     ======     ======     ======     ======
 Subscription Address, Support, Base64、clash-meta、sing-box Subscription Format, ${订阅器}
----------------------------------------------------------------
+----------
 Fast adaptive subscription address:
 https://${proxyhost}${hostName}/${userID}
 https://${proxyhost}${hostName}/${userID}?sub
@@ -1264,25 +1264,25 @@ https://${proxyhost}${hostName}/${userID}?clash
 singbox Subscription Address:
 https://${proxyhost}${hostName}/${userID}?sb
 https://${proxyhost}${hostName}/${userID}?singbox
----------------------------------------------------------------
-################################################################
+----------
+======     ======     ======     ======     ======
 v2ray
----------------------------------------------------------------
+
 ${v2ray}
----------------------------------------------------------------
-################################################################
+
+======     ======     ======     ======     ======
 clash-meta
----------------------------------------------------------------
+
 ${clash}
----------------------------------------------------------------
-################################################################
+
+======     ======     ======     ======     ======
 telegram channel
 https://t.me/F_NiREvil
----------------------------------------------------------------
+
 github account
 https://github.com/NiREvil/edgetunnel
----------------------------------------------------------------
-################################################################
+
+======     ======     ======     ======     ======
 `;
 	} else {
 		if (typeof fetch != 'function') {
