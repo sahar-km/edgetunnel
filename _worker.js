@@ -1247,7 +1247,7 @@ async function getVLESSConfig(userID, hostName, sub, UA, RproxyIP, _url) {
 			else 订阅器 += `, The currently used ProxyIP is empty: ${proxyIPs.join(', ')}`;
 		}
 		return `
-======     ======     ======     ====== 
+======     ======     ======     ======      ======     ======
 Subscription Address, Support, Base64、clash-meta、sing-box Subscription Format, ${订阅器}
 
 
@@ -1255,42 +1255,42 @@ Fast adaptive subscription address:
 https://${proxyhost}${hostName}/${userID}
 https://${proxyhost}${hostName}/${userID}?sub
 
----------------------------------------
+-------------------------------------------------------------
 
 Base64 Subscription Address:
 https://${proxyhost}${hostName}/${userID}?b64
 https://${proxyhost}${hostName}/${userID}?base64
 
----------------------------------------
+-------------------------------------------------------------
 
 Clash Subscription Address:
 https://${proxyhost}${hostName}/${userID}?clash
 
----------------------------------------
+-------------------------------------------------------------
 
 singbox Subscription Address:
 https://${proxyhost}${hostName}/${userID}?sb
 https://${proxyhost}${hostName}/${userID}?singbox
 
 
-======     ======     ======     ====== 
+======     ======     ======     ======      ======     ======
 v2ray
 
 ${v2ray}
 
-======     ======     ======     ====== 
+======     ======     ======     ======      ======     ======
 clash-meta
 
 ${clash}
 
-======     ======     ======     ====== 
+======     ======     ======     ======      ======     ======
 telegram channel
 https://t.me/F_NiREvil
 
 github account
 https://github.com/NiREvil/edgetunnel
 
-======     ======     ======     ====== 
+======     ======     ======     ======      ======     ======
 `;
 	} else {
 		if (typeof fetch != 'function') {
