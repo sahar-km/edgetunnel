@@ -1,5 +1,8 @@
-// <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:05 UTC<!--GAMFC-END-->.
-// @ts-ignore
+/**
+* @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:05 UTC<!--GAMFC-END-->.
+*   Last Update: 14:27 - Wednesday, 26 June 2024 by REvil
+* Many thanks to https://github.com/cmliu/edgetunnel
+*/
 import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID: https://www.uuidgenerator.net/
@@ -1232,16 +1235,16 @@ async function getVLESSConfig(userID, hostName, sub, UA, RproxyIP, _url) {
 	}
 
 	if ( userAgent.includes('mozilla') && !subParams.some(_searchParams => _url.searchParams.has(_searchParams))) {
-		let 订阅器 = `您的订阅内容由 ${sub} 提供维护支持, 自动获取ProxyIP: ${RproxyIP}`;
+		let 订阅器 = `您的订阅内容由 ${sub} Provide maintenance support, Automatic acquisition ProxyIP: ${RproxyIP}`;
 		if (!sub || sub == '') {
 			if (!proxyIP || proxyIP =='') {
-				订阅器 = '您的订阅内容由 内置 addresses/ADD 参数提供, 当前使用的ProxyIP为空, 推荐您设置 proxyIP/PROXYIP ！！！';
+				订阅器 = 'Your subscription is built by addresses/ADD Parameters provided, , It is recommended that you set proxyIP/PROXYIP ！！';
 			} else {
-				订阅器 = `您的订阅内容由 内置 addresses/ADD 参数提供, 当前使用的ProxyIP: ${proxyIPs.join(', ')}`;
+				订阅器 = `Your subscription is built by addresses/ADD Parameters provided, The currently used ProxyIP is empty: ${proxyIPs.join(', ')}`;
 			}
 		} else if (RproxyIP != 'true'){
-			if (enableSocks) 订阅器 += `, 当前使用的Socks5: ${parsedSocks5Address.hostname}:${String(parsedSocks5Address.port)}`;
-			else 订阅器 += `, 当前使用的ProxyIP: ${proxyIPs.join(', ')}`;
+			if (enableSocks) 订阅器 += `, Currently using Socks5: ${parsedSocks5Address.hostname}:${String(parsedSocks5Address.port)}`;
+			else 订阅器 += `, The currently used ProxyIP is empty: ${proxyIPs.join(', ')}`;
 		}
 		return `
 ################################################################
