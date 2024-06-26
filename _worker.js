@@ -1,6 +1,6 @@
 /**
 * @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:05 UTC<!--GAMFC-END-->.
-*   Last Update: 14:27 - Wednesday, 26 June 2024 by REvil
+*   Last Update: 17:27 - Wednesday, 26 June 2024 by REvil
 * Many thanks to https://github.com/cmliu/edgetunnel
 */
 import { connect } from 'cloudflare:sockets';
@@ -1055,19 +1055,19 @@ function socks5AddressParser(address) {
 		[username, password] = formers;
 	}
 
-	// 解析服务器地址部分
+	// Parsing server address part
 	const latters = latter.split(":");
-	// 从末尾提取端口号（因为 IPv6 地址中也包含冒号）
+	// Extract the port number from the end (because IPv6 addresses also contain colons）
 	port = Number(latters.pop());
 	if (isNaN(port)) {
 		throw new Error('无效的 SOCKS 地址格式：端口号必须是数字');
 	}
 
-	// 剩余部分就是主机名（可能是域名、IPv4 或 IPv6 地址）
+	// The remainder is the hostname (which may be a domain name, IPv4 or IPv6 address）
 	hostname = latters.join(":");
 
-	// 处理 IPv6 地址的特殊情况
-	// IPv6 地址包含多个冒号，所以必须用方括号括起来，如 [2001:db8::1]
+	// Handling special cases for IPv6 addresses
+	// IPv6 The address contains multiple colons, so it must be enclosed in square brackets, such as [2001:db8::1]
 	const regex = /^\[.*\]$/;
 	if (hostname.includes(":") && !regex.test(hostname)) {
 		throw new Error('无效的 SOCKS 地址格式：IPv6 地址必须用方括号括起来，如 [2001:db8::1]');
@@ -1076,10 +1076,11 @@ function socks5AddressParser(address) {
 	//if (/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(hostname)) hostname = `${atob('d3d3Lg==')}${hostname}${atob('LmlwLjA5MDIyNy54eXo=')}`;
 	// 返回解析后的结果
 	return {
-		username,  // 用户名，如果没有则为 undefined
-		password,  // 密码，如果没有则为 undefined
-		hostname,  // 主机名，可以是域名、IPv4 或 IPv6 地址
-		port,     // 端口号，已转换为数字类型
+		username,  // Username, or if none undefined
+		password,  // Password, if none undefined
+		hostname,  // Host name, which can be a domain name、IPv4 或 IPv6 地址
+		port,     // Port number, converted to numeric type
+
 	}
 }
 
@@ -1094,14 +1095,14 @@ function socks5AddressParser(address) {
  * @returns {string} 恢复真实信息后的内容
  */
 function revertFakeInfo(content, userID, hostName, isBase64) {
-	if (isBase64) content = atob(content);  // 如果内容是Base64编码的，先解码
+	if (isBase64) content = atob(content);  // If the content is Base64 encoded, decode it first
 	
-	// 使用正则表达式全局替换（'g'标志）
-	// 将所有出现的假用户ID和假主机名替换为真实的值
+	// Use regular expression global replacement ('g' flag)
+	// Replace all occurrences of fake user IDs and fake hostnames with real values
 	content = content.replace(new RegExp(fakeUserID, 'g'), userID)
 	               .replace(new RegExp(fakeHostName, 'g'), hostName);
 	
-	if (isBase64) content = btoa(content);  // 如果原内容是Base64编码的，处理完后再次编码
+	if (isBase64) content = btoa(content);  // If the original content is Base64 encoded, encode it again after processing.
 	
 	return content;
 }
@@ -1117,17 +1118,17 @@ function revertFakeInfo(content, userID, hostName, isBase64) {
 async function MD5MD5(text) {
 	const encoder = new TextEncoder();
   
-	// 第一次MD5哈希
+	// First MD5 hash
 	const firstPass = await crypto.subtle.digest('MD5', encoder.encode(text));
 	const firstPassArray = Array.from(new Uint8Array(firstPass));
 	const firstHex = firstPassArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-	// 第二次MD5哈希，使用第一次哈希结果的中间部分（索引7到26）
+	// Second MD5 hash, using the middle part of the first hash result (indexes 7 to 26)
 	const secondPass = await crypto.subtle.digest('MD5', encoder.encode(firstHex.slice(7, 27)));
 	const secondPassArray = Array.from(new Uint8Array(secondPass));
 	const secondHex = secondPassArray.map(b => b.toString(16).padStart(2, '0')).join('');
   
-	return secondHex.toLowerCase();  // 返回小写的十六进制字符串
+	return secondHex.toLowerCase();  // Returns a lowercase hexadecimal string
 }
 
 /**
@@ -1140,14 +1141,15 @@ async function MD5MD5(text) {
  */
 async function ADD(envadd) {
 	//Replace tabs, double quotes, single quotes, and newlines with commas
-	// 然后将连续的多个逗号替换为单个逗号
+	// Then replace multiple commas in a row with a single comma
 	var addtext = envadd.replace(/[	|"'\r\n]+/g, ',').replace(/,+/g, ',');
 	
-	// 删除开头和结尾的逗号（如果有的话）
+	// Remove leading and trailing commas (if any)
+
 	if (addtext.charAt(0) == ',') addtext = addtext.slice(1);
 	if (addtext.charAt(addtext.length - 1) == ',') addtext = addtext.slice(0, addtext.length - 1);
 	
-	// 使用逗号分割字符串，得到地址数组
+	// Use commas to split the string and get the address array
 	const add = addtext.split(',');
 	
 	return add;
@@ -1218,12 +1220,12 @@ async function getVLESSConfig(userID, hostName, sub, UA, RproxyIP, _url) {
 			
 				if (!response.ok) {
 					console.error('获取地址时出错:', response.status, response.statusText);
-					return; // 如果有错误，直接返回
+					return; // If there is an error, return directly
 				}
 			
 				const text = await response.text();
 				const lines = text.split('\n');
-				// 过滤掉空行或只包含空白字符的行
+				// Filter out empty lines or lines containing only whitespace characters
 				const nonEmptyLines = lines.filter(line => line.trim() !== '');
 			
 				proxyhosts = proxyhosts.concat(nonEmptyLines);
@@ -1328,12 +1330,12 @@ GitHub : https://github.com/NiREvil/edgetunnel
 					
 						if (!response.ok) {
 							console.error('获取地址时出错:', response.status, response.statusText);
-							return; // 如果有错误，直接返回
+							return; // If there is an error, return directly
 						}
 					
 						const text = await response.text();
 						const lines = text.split('\n');
-						// 过滤掉空行或只包含空白字符的行
+						// Filter out empty lines or lines containing only whitespace characters
 						const nonEmptyLines = lines.filter(line => line.trim() !== '');
 					
 						proxyhosts = proxyhosts.concat(nonEmptyLines);
@@ -1390,7 +1392,7 @@ async function getAccountId(email, key) {
 		});
 		const response = await fetch(url, { headers });
 		const data = await response.json();
-		return data.result[0].id; // 假设我们需要第一个账号ID
+		return data.result[0].id; // Suppose we need the first account ID
 	} catch (error) {
 		return false ;
 	}
@@ -1498,13 +1500,13 @@ async function getAddressesapi(api) {
 	} catch (error) {
 		console.error(error);
 	} finally {
-		// 无论成功或失败，最后都清除设置的超时定时器
+		// Regardless of success or failure, the set timeout timer is finally cleared.
 		clearTimeout(timeout);
 	}
 
 	const newAddressesapi = await ADD(newapi);
 
-	// 返回处理后的结果
+	// Return the processed result
 	return newAddressesapi;
 }
 
@@ -1524,7 +1526,7 @@ async function getAddressescsv(tls) {
 				continue;
 			}
 		
-			const text = await response.text();// 使用正确的字符编码解析文本内容
+			const text = await response.text();// Parse text content using correct character encoding
 			let lines;
 			if (text.includes('\r\n')){
 				lines = text.split('\r\n');
@@ -1532,25 +1534,25 @@ async function getAddressescsv(tls) {
 				lines = text.split('\n');
 			}
 		
-			// 检查CSV头部是否包含必需字段
+			// Check if the CSV header contains required fields
 			const header = lines[0].split(',');
 			const tlsIndex = header.indexOf('TLS');
-			const speedIndex = header.length - 1; // 最后一个字段
+			const speedIndex = header.length - 1; // last field
 		
-			const ipAddressIndex = 0;// IP地址在 CSV 头部的位置
-			const portIndex = 1;// 端口在 CSV 头部的位置
-			const dataCenterIndex = tlsIndex + 1; // 数据中心是 TLS 的后一个字段
+			const ipAddressIndex = 0;// The position of the IP address in the CSV header
+			const portIndex = 1;// The position of the port in the CSV header
+			const dataCenterIndex = tlsIndex + 1; // Datacenter is the latter field of TLS
 		
 			if (tlsIndex === -1) {
 				console.error('CSV文件缺少必需的字段');
 				continue;
 			}
 		
-			// 从第二行开始遍历CSV行
+			// Iterate over CSV rows starting from the second row
 			for (let i = 1; i < lines.length; i++) {
 				const columns = lines[i].split(',');
 		
-				// 检查TLS是否为"TRUE"且速度大于DLS
+				// Check if TLS is "TRUE" and faster than DLS
 				if (columns[tlsIndex].toUpperCase() === tls && parseFloat(columns[speedIndex]) > DLS) {
 					const ipAddress = columns[ipAddressIndex];
 					const port = columns[portIndex];
@@ -1627,7 +1629,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 			if(proxyhosts.length > 0 && (伪装域名.includes('.workers.dev') || 伪装域名.includes('pages.dev'))) {
 				最终路径 = `/${伪装域名}${最终路径}`;
 				伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-				节点备注 = ` 已启用临时域名中转服务，请尽快绑定自定义域！`;
+				节点备注 = ` Temporary domain name forwarding service enabled，please bind a custom domain as soon as possible！`;
 			}
 
 			const vlessLink = `vless://${UUID}@${address}:${port}?encryption=none&security=&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
@@ -1638,7 +1640,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 
 	}
 
-	// 使用Set对象去重
+	// Use Set object to remove duplicates
 	const uniqueAddresses = [...new Set(addresses)];
 
 	const responseBody = uniqueAddresses.map(address => {
@@ -1689,7 +1691,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 		if(proxyhosts.length > 0 && (伪装域名.includes('.workers.dev') || 伪装域名.includes('pages.dev'))) {
 			最终路径 = `/${伪装域名}${最终路径}`;
 			伪装域名 = proxyhosts[Math.floor(Math.random() * proxyhosts.length)];
-			节点备注 = ` 已启用临时域名中转服务，请尽快绑定自定义域！`;
+			节点备注 = ` Temporary domain name forwarding service enabled，please bind a custom domain as soon as possible！`;
 		}
 		
 		const 协议类型 = atob(啥啥啥_写的这是啥啊);
