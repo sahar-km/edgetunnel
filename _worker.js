@@ -6,7 +6,7 @@ import { connect } from 'cloudflare:sockets';
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = '9db7e000-1490-4c9a-a844-484c68c46657';
 
-let proxyIP = '99.83.209.185';
+let proxyIP = 'bpb.radically.pro';
 
 
 if (!isValidUUID(userID)) {
