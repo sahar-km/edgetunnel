@@ -21,7 +21,7 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
 -   Abonelik hizmetine yanlış düğüm yapılandırmaları göndererek düğüm yapılandırma bilgilerinin sızmasını önleyin.
 -   Alternatif olarak, kendiniz dağıtmayı da seçebilirsiniz[WorkerVless2sub Abonelik Oluşturma Hizmeti](https://github.com/cmliu/WorkerVless2sub)Böylece abonelik oluşturucunun avantajlarından yararlanabilirsiniz.
 
-## İşçi dağıtım yöntemi[Video öğretici](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=83s)
+## İşçi dağıtım yöntemi[Video eğitimi](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=83s)
 
 1.  Cloudflare Worker'ı dağıtın:
     -   Cloudflare Worker konsolunda yeni bir Worker oluşturun.
@@ -36,28 +36,28 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
     -   şarkı kutusu abonelik formatı`https://vless.google.workers.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`şarkı kutusu vb. için uygundur.
 
 3.  Çalışanlara özel bir alan adı bağlayın:
-    -   İşçi konsolunda`trigger`sekme, aşağıya tıklayın`Add a custom domain` 。
+    -   İşçi konsolunda`trigger`sekme, aşağıya tıklayın`Add a custom domain`。
     -   CloudFlare alan adı çözümleme hizmetine aktardığınız ikincil alan adını girin, örneğin:`vless.google.com`Tıkladıktan sonra`Add a custom domain`, sertifikanın geçerli olmasını bekleyin.
     -   **Eğer acemiyseniz, daha fazla bakmanıza gerek kalmadan hemen şimdi yola çıkabilirsiniz! ! !**
 
 <details>
 <summary><code><strong>「 I'm not a newbie! I'm really, really not a newbie! I want to try some tricks! I want to start playing with advanced techniques! 」</strong></code></summary>
 
-4.  Kendininkini kullan`Preferred domain name`/`BestIP`Şunun için abonelikler:
-    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub).txt dosyasındaki dağıtım talimatlarına göre kendiniz oluşturun.
+4.  kendininkini kullan`Preferred domain name`/`BestIP`Şunun için abonelikler:
+    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub)içindeki dağıtım talimatlarına göre kendiniz oluşturun.
     -   Açık[işçi.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js)dosya, 12. satırda bulundu`sub`değişkeni seçin ve konuşlandırılan abonelik oluşturucunuzun adresine göre değiştirin. Örneğin`let sub = 'sub.cmliussss.workers.dev';`, https gibi protokol bilgilerini ve simgeleri eklememeye dikkat edin.
     -   Kendi abonelik adresinizi kullanırsanız abonelik oluşturucunun`sub`alan adı ve`[YOUR-WORKER-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`sub`Değişkene,workers.dev'e atanan alan adı atanır.
 
 </details>
 
-## Sayfa yükleme dağıtım yöntemi**Best recommendation!!!**[Video öğretici](https://www.youtube.com/watch?v=59THrmJhmAw)
+## Sayfa yükleme dağıtım yöntemi**En iyi öneri!!!**[Video eğitimi](https://www.youtube.com/watch?v=59THrmJhmAw)
 
 1.  Cloudflare Sayfalarını Dağıtın:
     -   indirmek[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)dosyanızı açın ve Yıldız'a tıklayın!!!
     -   Cloudflare Sayfaları konsolunda seçin`Upload assets`Son olarak projenize bir isim verin ve tıklayın.`Create a project`ve ardından indirilenleri yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`Deployment Site`。
     -   Dağıtım tamamlandıktan sonra tıklayın`Continue processing site`Bundan sonra seçin`set up`>`Environment variables`>**yapmak**Üretim için değişkenleri tanımlayın >`Add variables`.
-        Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`keep`Bu kadar.
-    -   geri dönmek`Deploy`sekmesinde sağ alt köşedeki simgesine tıklayın`Create a New Deployment`Daha sonra yeniden yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`Save and deploy`Bu kadar.
+        Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`keep`İşte bu.
+    -   geri dönmek`Deploy`sekmesinde sağ alt köşedeki simgesine tıklayın`Create a New Deployment`Daha sonra yeniden yükleyin[worker.zip](https://raw.githubusercontent.com/cmliu/edgetunnel/main/worker.zip)Dosyadan sonra tıklayın`Save and deploy`İşte bu.
 
 2.  Abonelik içeriğine erişin:
     -   erişim`https://[YOUR-PAGES-URL]/[YOUR-UUID]`Abonelik içeriği mevcuttur.
@@ -89,12 +89,12 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
 
 </details>
 
-## Sayfalar GitHub dağıtım yöntemi[Video öğretici](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=560s)
+## Sayfalar GitHub dağıtım yöntemi[Video eğitimi](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=560s)
 
 1.  Cloudflare Sayfalarını Dağıtın:
     -   Bu projeyi Github'da çatallayın ve Yıldız'a tıklayın!!!
     -   Cloudflare Sayfaları konsolunda seçin`连接到 Git`Bundan sonra seçin`edgetunnel`Öğeden sonra tıklayın`开始设置`。
-    -   var olmak`设置构建和部署`Sayfanın alt kısmında`环境变量（高级）`daha sonra birleştir`添加变量`Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`保存并部署`Bu kadar.
+    -   var olmak`设置构建和部署`Sayfanın alt kısmında`环境变量（高级）`daha sonra birleştir`添加变量`Değişken adını girin**UUID**değer UUID'nizdir, ardından tıklayın`保存并部署`İşte bu.
 
 2.  Abonelik içeriğine erişin:
     -   erişim`https://[YOUR-PAGES-URL]/[YOUR-UUID]`Abonelik içeriği mevcuttur.
@@ -103,31 +103,31 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
     -   Örneğin`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?clash`OpenClash vb. için uygun Clash abonelik formatı.
     -   Örneğin`https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sb`singbox abonelik formatı, singbox vb. için uygundur.
 
-3.  CNAME özel alan adını Sayfalara bağlayın:[Video öğretici](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
+3.  CNAME özel alan adını Sayfalara bağlayın:[Video eğitimi](https://www.youtube.com/watch?v=LeT4jQUh8ok&t=851s)
     -   Sayfalar konsolunda`自定义域`sekme, aşağıya tıklayın`设置自定义域`。
     -   Özel ikincil alan adınızı girin, kök alan adınızı kullanmamaya dikkat edin, örneğin:
-        Size atanan alan adı`fuck.cloudns.biz`, ardından doldurulacak özel bir alan ekleyin`lizi.fuck.cloudns.biz`Bu kadar;
-    -   Cloudflare gereksinimlerine göre alan adı DNS servis sağlayıcınız iade edilecek ve özel alan adı eklenecektir.`lizi`CNAME kaydı`edgetunnel.pages.dev`Bundan sonra tıklayın`激活域`Bu kadar.
+        Size atanan alan adı`fuck.cloudns.biz`ardından doldurulacak özel bir alan ekleyin`lizi.fuck.cloudns.biz`İşte bu;
+    -   Cloudflare gereksinimlerine göre alan adı DNS servis sağlayıcınız iade edilecek ve özel alan adı eklenecektir.`lizi`CNAME kaydı`edgetunnel.pages.dev`Bundan sonra tıklayın`激活域`İşte bu.
     -   **Eğer acemiyseniz, sayfalarınız bağlayıcıdır`自定义域`Bundan sonra doğrudan yola çıkabilirsiniz, daha fazla bakmanıza gerek yok! ! !**
 
 <details>
 <summary><code><strong>「 我不是小白！我真的真的不是小白！我要玩花活！我要开启高端玩法！ 」</strong></code></summary>
 
-4.  Kendininkini kullan`优选域名`/`优选IP`Şunun için abonelikler:
-    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub).txt dosyasındaki dağıtım talimatlarına göre kendiniz oluşturun.
+4.  kendininkini kullan`优选域名`/`优选IP`Şunun için abonelikler:
+    -   Kendi tercih ettiğiniz alan adını veya kendi tercih ettiğiniz IP'yi kullanmak istiyorsanız, şu adrese başvurabilirsiniz:[WorkerVless2sub GitHub deposu](https://github.com/cmliu/WorkerVless2sub)içindeki dağıtım talimatlarına göre kendiniz oluşturun.
     -   Sayfalar konsolunda`设置`sekme, seç`环境变量`>`制作`>`编辑变量`>`添加变量`；
     -   Değişken adı şu şekilde ayarlandı:`SUB`karşılık gelen değer, dağıttığınız abonelik oluşturucunun adresidir. Örneğin`sub.cmliussss.workers.dev`, ardından tıklayın**kale**。
-    -   Daha sonra Sayfalar konsolunda`部署`sekme, seç`所有部署`>`最新部署最右的 ...`>`重试部署`, bu kadar.
+    -   Daha sonra Sayfalar konsolunda`部署`sekme, seç`所有部署`>`最新部署最右的 ...`>`重试部署`, işte bu.
     -   Kendi abonelik adresinizi kullanırsanız abonelik oluşturucunun`SUB`alan adı ve`[YOUR-PAGES-URL]`Alan adı aynı üst düzey alan adına ait değil, aksi takdirde bir istisna oluşacaktır. Yapabilirsiniz`SUB`Değişkene Pages.dev'e atanan alan adı atanır.
 
 </details>
 
 ### Değişken açıklaması
 
-| değişken ismi    | Örnek                                                                                                                                                          | Açıklama                                                                                                                                                                           | YT                                                           |
+| değişken adı     | Örnek                                                                                                                                                          | Açıklama                                                                                                                                                                           | YT                                                           |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| UUID             | 90SD4AH-141A-43SS-991B-08263SVISES10                                                                                                                           | Powershell -Çıkış Yok -Komut "[rehber]&#x3A;:NewGuid()"                                                                                                                            | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s)   |
-| PROXY IP         | proxyip.fxxk.dedyn.io                                                                                                                                          | CloudFlareCDN sitesine erişim için proxy düğümü olarak alternatif (ProxyIP'ler arasında kullanılan birden fazla ProxyIP'yi destekler)`,`veya aralık olarak satır besleme)          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s)  |
+| UUID             | 90SD4AH-141A-43SS-991B-08263SVISES10                                                                                                                           | Powershell -Çıkış Yok -Komut "[rehber]&#x3A;:YeniGuid()"                                                                                                                           | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s)   |
+| PROXYIP          | proxyip.fxxk.dedyn.io                                                                                                                                          | CloudFlareCDN sitesine erişim için proxy düğümü olarak alternatif (ProxyIP'ler arasında kullanılan birden fazla ProxyIP'yi destekler)`,`veya aralık olarak satır besleme)          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s)  |
 | ÇORAP5           | kullanıcı:[password@127.0.0.1](mailto:password@127.0.0.1):1080                                                                                                 | CloudFlareCDN sitelerine erişim için SOCKS5 proxy'si olarak tercih edilir                                                                                                          | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=826s)  |
 | ALT              | sub.cmliussss.workers.dev                                                                                                                                      | Yerleşik alan adı ve IP düğümü bilgileriyle birlikte abonelik oluşturucu adresi                                                                                                    | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1193s) |
 | subapi           | api.v1.mk                                                                                                                                                      | Clash, singbox vb. abonelik dönüşümü arka ucu                                                                                                                                      | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1446s) |
@@ -148,4 +148,4 @@ Telegram iletişim grubu:[@CMLiussss](https://t.me/CMLiussss)
 
 # minnettar
 
-[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize et](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-bebek](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Sheggs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
+[zizifn](https://github.com/zizifn/edgetunnel)、[Sterilize et](https://github.com/3Kmfi6HP/EDtunnel)、[Stanley-bebek](https://github.com/Stanley-baby)、[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash/config)、[Shegs1999](https://github.com/SHIJS1999/cloudflare-worker-vless-ip)
